@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CMAD Bank Online</title>
+<script type="text/javascript">
+	function Createlogin(){
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var data = {
+				name: name,
+				email: email
+		};
+		var xhr = new XMLHttpRequest();
+		xhr.open("post", "http://localhost:8080/blogging/online/blog/Createlogin", true);
+		xhr.setHeaders("Content-Type", "application/json");
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4 && xhr.status == 200){
+				console.log("email: " + xhr.responseText);
+			}
+		};
+		xhr.send(JSON.stringify(data));
+	}
+</script>
+</head>
+<body>
+	<h1>BLOGGING</h1>
+	<a href='open.html'>Open Login</a> |
+	<a href='view.html'>View Login </a>
+	<hr />
+	Open A New Account
+	<table>
+		<tr>
+			<td>Name</td>
+			<td><input id='name'></td>
+		</tr>
+		<tr>
+			<td>email</td>
+			<td><input id='email'></td>
+		</tr>
+		<tr>
+			<td><button onclick='Createlogin()'>Create login </button></td>
+		</tr>
+	</table>
+</body>
+</html>

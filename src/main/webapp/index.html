@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BLOGGING </title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src='blog.js'></script>
+<link rel='stylesheet' href='blog.css'>
+<link>
+</head>
+<body>
+	<h1>BLOGGING</h1>
+	<a href='#' id='openLink'>Login</a> |
+	<a href='#' id='viewLink'>View Login details</a>
+	<hr />
+	<div id='viewForm'>
+		EMAIL: <input id='email'>
+		<button id="viewButton">View</button>
+	</div>
+	<div id='openForm'>
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input id='name'></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input id='email'></td>
+			</tr>
+			<tr>
+				<td><button id='openButton'>Create Login</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id='openResults'></div>
+	<div id='viewResults'>
+		Login Details
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><span id='name'></span></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td><span id='email'></span></td>
+			</tr>
+			
+		</table>
+	</div>
+</body>
+</html>
